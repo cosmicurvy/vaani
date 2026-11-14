@@ -13,3 +13,7 @@ vaani
 
 # some questions to test locally 
 eval_questions.jsonl
+
+
+data/qdrant/
+data/bm25_documents.pkl
