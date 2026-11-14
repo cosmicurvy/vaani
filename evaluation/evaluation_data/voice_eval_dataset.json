@@ -1,0 +1,32 @@
+[
+  {
+    "id": "voice_01",
+    "language": "en",
+    "ground_truth": "Where is my order VK10001 and when will it arrive?"
+  },
+  {
+    "id": "voice_02",
+    "language": "en",
+    "ground_truth": "What is the return policy for damaged electronic items?"
+  },
+  {
+    "id": "voice_03",
+    "language": "en",
+    "ground_truth": "How many days does it take to process a refund to my original payment method?"
+  },
+  {
+    "id": "voice_04",
+    "language": "hinglish",
+    "ground_truth": "Mera order abhi tak deliver nahi hua hai, main status kaise check karun?"
+  },
+  {
+    "id": "voice_05",
+    "language": "hinglish",
+    "ground_truth": "Kya main earbuds return kar sakti hoon agar seal open nahi hua hai?"
+  },
+  {
+    "id": "voice_06",
+    "language": "hinglish",
+    "ground_truth": "Mera product toota hua mila hai, mujhe replacement chahiye."
+  }
+]

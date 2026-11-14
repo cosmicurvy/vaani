@@ -1,0 +1,304 @@
+{
+  "judge_model": "Groq (qwen/qwen3.8-27b)",
+  "deepeval_version": "4.3.3",
+  "total_conversations": 5,
+  "threshold": 0.7,
+  "average_scores": {
+    "conversation_relevancy": 0.76,
+    "knowledge_retention": 0.68,
+    "conversation_completeness": 0.6067,
+    "role_adherence": 0.77
+  },
+  "conversations": [
+    {
+      "id": "conv_01_en_coreference",
+      "description": "English multi-turn RAG testing QueryRewriter pronoun resolution and memory retention",
+      "language": "en",
+      "num_user_turns": 4,
+      "dialogue": [
+        {
+          "turn": 1,
+          "user": "Hi, I bought a laptop from VoltKart yesterday and I want to know its return window.",
+          "assistant": "Laptops have a 10-day return window starting from the day of delivery. [S3]",
+          "route": "rag",
+          "awaiting": null
+        },
+        {
+          "turn": 2,
+          "user": "Can I return it if I just changed my mind and haven't opened the box?",
+          "assistant": "Yes, you can return the laptop for a change of mind if it is unopened and within the 10-day return window. Please note that a reverse pickup fee of ₹99 will be deducted from your refund if you choose courier pickup, or you can drop it off at a VoltKart partner pickup point for free. [S1] [S3]",
+          "route": "rag",
+          "awaiting": null
+        },
+        {
+          "turn": 3,
+          "user": "Is there any pickup fee if I return it for that reason?",
+          "assistant": "Yes, if you return the laptop for a change of mind, a reverse pickup fee of ₹99 will be deducted from your refund if you choose courier pickup. However, dropping the parcel at a VoltKart partner pickup point is always free. [S1] [S2] [S3]",
+          "route": "rag",
+          "awaiting": null
+        },
+        {
+          "turn": 4,
+          "user": "What about the warranty on its battery and adapter if I decide to keep it?",
+          "assistant": "If you keep the laptop, the battery and adapter are covered by a 6-month warranty, while the rest of the laptop has a 12-month warranty. [S1] [S2]",
+          "route": "rag",
+          "awaiting": null
+        }
+      ],
+      "metrics": {
+        "conversation_relevancy": {
+          "score": 1.0,
+          "passed": true,
+          "reason": "The score is 1.0 because the list of irrelevancies is empty, indicating that the AI messages are fully relevant to the user messages."
+        },
+        "knowledge_retention": {
+          "score": 1.0,
+          "passed": true,
+          "reason": "The score is 1.00 because no attritions were identified, indicating that the LLM response did not exhibit forgetfulness and successfully retained all previously established knowledge."
+        },
+        "conversation_completeness": {
+          "score": 1.0,
+          "passed": true,
+          "reason": "The score is 1.0 because the LLM response fully addresses the User's intentions regarding the return window, the policy for returning an unopened laptop due to a change of mind, any associated pickup fees, and the warranty details for the battery and adapter."
+        },
+        "role_adherence": {
+          "score": 1.0,
+          "passed": true,
+          "reason": "The score is 1.0 because there are no out-of-character responses provided in the list. The LLM chatbot responses fully adhered to the role of Vaani, a polite, grounded bilingual customer-support assistant for VoltKart, without any deviations or off-topic queries."
+        }
+      }
+    },
+    {
+      "id": "conv_02_hinglish_coreference",
+      "description": "Hinglish multi-turn RAG testing cross-lingual follow-up query rewriting",
+      "language": "hinglish",
+      "num_user_turns": 4,
+      "dialogue": [
+        {
+          "turn": 1,
+          "user": "Namaste, maine 50 inch ka TV order kiya hai. Kya iska installation free hai?",
+          "assistant": "Haan, 50 inch TV ki installation free hai. 32 inch aur usse bade TVs ke liye brand technician dwara free demo aur installation provided ki jaati hai. [S1]",
+          "route": "rag",
+          "awaiting": null
+        },
+        {
+          "turn": 2,
+          "user": "Kya iske saath box mein wall mount bracket bhi aata hai?",
+          "assistant": "Main Vaani, aapki customer support assistant hoon. Main orders, delivery, returns, refunds, products aur company policies mein help kar sakti hoon.",
+          "route": "direct",
+          "awaiting": null
+        },
+        {
+          "turn": 3,
+          "user": "Agar mujhe bracket alag se lena ho aur wall par fit karwana ho to total kitna charge lagega?",
+          "assistant": "Main Vaani, aapki customer support assistant hoon. Main orders, delivery, returns, refunds, products aur company policies mein help kar sakti hoon.",
+          "route": "direct",
+          "awaiting": null
+        },
+        {
+          "turn": 4,
+          "user": "Technician delivery ke kitne din baad visit karta hai?",
+          "assistant": "Delivery ke baad technician 24 hours mein call karta hai aur 3 business days ke andar visit karta hai. Non-metro areas mein ye time 5 business days tak ho sakta hai. [S3]",
+          "route": "rag",
+          "awaiting": null
+        }
+      ],
+      "metrics": {
+        "conversation_relevancy": {
+          "score": 0.5,
+          "passed": false,
+          "reason": "The score is 0.5 because in message 2, the assistant ignored the user's specific question about whether a wall mount bracket is included and instead provided a 'generic introduction of itself and its capabilities', and in message 3, it failed to address the query about installation costs by responding with a 'generic self-introduction (\"I am Vaani...\")'."
+        },
+        "knowledge_retention": {
+          "score": 1.0,
+          "passed": true,
+          "reason": "The score is 1.00 because no attritions were identified, indicating that the LLM response did not exhibit forgetfulness and successfully retained all previously established knowledge."
+        },
+        "conversation_completeness": {
+          "score": 0.5,
+          "passed": false,
+          "reason": "The score is 0.5 because the LLM response only partially addresses the User's intentions. It successfully provides information regarding whether installation is free for a 50-inch TV and the timeline for the technician's visit after delivery. However, it fails to answer the specific inquiries about whether a wall mount bracket is included in the box and the cost of purchasing a bracket and having it installed separately, instead replying with a generic introduction: 'Main Vaani, aapki customer support assistant hoon. Main orders, delivery, returns, refunds, products aur company policies mein help kar sakti hoon.'"
+        },
+        "role_adherence": {
+          "score": 0.5,
+          "passed": false,
+          "reason": "The score is 0.5 because the LLM chatbot responses in turn #4 and turn #6, which state 'Main Vaani, aapki customer support assistant hoon. Main orders, delivery, returns, refunds, products aur company policies mein help kar sakti hoon.', are repetitive and generic. While the language (Hinglish) and persona name are correct, the role specifies that Vaani should help track orders after verifying specific details (Order ID, name, city) and answer questions strictly based on policies. These responses fail to initiate the required verification process or address specific customer needs, instead offering a broad, static introduction that does not demonstrate the 'grounded' and specific policy-based assistance required by the role, resulting in only partial adherence."
+        }
+      }
+    },
+    {
+      "id": "conv_03_order_lookup_flow",
+      "description": "Multi-step stateful slot-filling for order tracking (awaiting_order_id -> awaiting_order_verification)",
+      "language": "en",
+      "num_user_turns": 3,
+      "dialogue": [
+        {
+          "turn": 1,
+          "user": "Where is my order?",
+          "assistant": "Sure, I can help track your order. Please share your order ID, for example VK10001.",
+          "route": "order_lookup",
+          "awaiting": "order_id"
+        },
+        {
+          "turn": 2,
+          "user": "VK10001",
+          "assistant": "Thank you. To verify the order for this demo, please enter the customer name and city separated by a comma. For example: Aarav Sharma, Delhi",
+          "route": "order_lookup",
+          "awaiting": "customer_name_and_city"
+        },
+        {
+          "turn": 3,
+          "user": "Aarav Sharma, Delhi",
+          "assistant": "Here are the verified details for your order:\n\nOrder ID: VK10001\nItems: Novatek N5 5G (8GB/128GB) x1\nOrder status: Delivered\nOrder date: 2026-10-14\nEstimated delivery: 2026-10-17\nCourier: BlueRoute\nTracking ID: BL10001001\nDelivered on: 2026-10-18",
+          "route": "order_lookup",
+          "awaiting": null
+        }
+      ],
+      "metrics": {
+        "conversation_relevancy": {
+          "score": 1.0,
+          "passed": true,
+          "reason": "The score is 1.0 because the list of irrelevancies is empty, indicating that the AI messages are fully relevant to the user messages."
+        },
+        "knowledge_retention": {
+          "score": 1.0,
+          "passed": true,
+          "reason": "The score is 1.00 because no attritions were identified, indicating that the LLM response did not exhibit forgetfulness and successfully retained all previously established knowledge."
+        },
+        "conversation_completeness": {
+          "score": 1.0,
+          "passed": true,
+          "reason": "The score is 1.0 because the LLM response fully satisfies the User's intention to track their order, as there are no identified gaps or missing information in the provided output."
+        },
+        "role_adherence": {
+          "score": 1.0,
+          "passed": true,
+          "reason": "The score is 1.0 because there are no out-of-character responses provided in the list. The LLM chatbot responses fully adhered to the role of Vaani, a polite, grounded bilingual customer-support assistant for VoltKart, without any deviations or off-topic queries."
+        }
+      }
+    },
+    {
+      "id": "conv_04_topic_switch_recovery",
+      "description": "Tests escaping a pending order verification state when the user switches to a policy question",
+      "language": "hinglish",
+      "num_user_turns": 5,
+      "dialogue": [
+        {
+          "turn": 1,
+          "user": "Where is my order VK10001?",
+          "assistant": "I found the order ID format. To verify the order for this demo, please enter the customer name and city separated by a comma. For example: Aarav Sharma, Delhi",
+          "route": "order_lookup",
+          "awaiting": "customer_name_and_city"
+        },
+        {
+          "turn": 2,
+          "user": "Urvashi, Mumbai",
+          "assistant": "I couldn't verify those details. Please check your order ID, customer name and city. (Or ask another question to exit order lookup.)",
+          "route": "order_lookup",
+          "awaiting": "customer_name_and_city"
+        },
+        {
+          "turn": 3,
+          "user": "Koi baat nahi, mujhe ye batao ki UPI refund aane mein kitne business days lagte hain?",
+          "assistant": "I couldn't verify those details. Please check your order ID, customer name and city. (Or ask another question to exit order lookup.)",
+          "route": "order_lookup",
+          "awaiting": "customer_name_and_city"
+        },
+        {
+          "turn": 4,
+          "user": "Aur agar main refund VoltKart Wallet mein loon to kya koi bonus milta hai?",
+          "assistant": "Haan, agar aap refund VoltKart Wallet mein lete hain to aapko refund amount par 1% bonus milega, jo maximum ₹100 tak ho sakta hai. Yeh bonus 90 din ke baad expire ho jata hai, lekin aapka main wallet balance kabhi expire nahi hota. [S1] [S2]",
+          "route": "rag",
+          "awaiting": null
+        },
+        {
+          "turn": 5,
+          "user": "Bye",
+          "assistant": "Vaani se baat karne ke liye thank you! Aapka din achha rahe.",
+          "route": "direct",
+          "awaiting": null
+        }
+      ],
+      "metrics": {
+        "conversation_relevancy": {
+          "score": 0.8,
+          "passed": true,
+          "reason": "The score is 0.8 because in message 3, the assistant ignored the user's explicit new question about UPI refund timelines and their intent to move on (indicated by 'Koi baat nahi'), instead repeating the previous error message regarding order verification."
+        },
+        "knowledge_retention": {
+          "score": 0.4,
+          "passed": false,
+          "reason": "The score is 0.40 because the LLM failed to retain previously established knowledge, specifically asking for the Order ID (VK10001), Customer Name (Urvashi), and City (Mumbai) which were already provided, and incorrectly addressing the user as 'Va' instead of 'Urvashi'."
+        },
+        "conversation_completeness": {
+          "score": 0.3333,
+          "passed": false,
+          "reason": "The score is 0.3333333333333333 because the LLM response only partially addressed the user's intentions. While the response did not explicitly fail to answer the question about the wallet refund bonus, it failed to provide the requested order status for 'VK10001' and did not answer the query regarding the processing time for a UPI refund, instead repeating the error message: \"I couldn't verify those details. Please check your order ID, customer name and city.\""
+        },
+        "role_adherence": {
+          "score": 0.6,
+          "passed": false,
+          "reason": "The score is 0.6 because while the chatbot generally maintains a polite and bilingual tone, it violates the core instruction to answer questions 'strictly based on VoltKart's... policies without inventing facts.' In turn #8, the LLM chatbot response provides highly specific and likely fabricated details about a '1% bonus' on wallet refunds, a 'maximum ₹100' cap, and a '90 days' expiry period. Since the role explicitly forbids inventing facts and requires strict adherence to provided policies, this hallucination of specific financial terms significantly detracts from role adherence, despite the otherwise appropriate language and politeness."
+        }
+      }
+    },
+    {
+      "id": "conv_05_role_adherence_and_guardrails",
+      "description": "Tests Role Adherence when user asks off-topic questions and then asks about VoltKart Protect",
+      "language": "en",
+      "num_user_turns": 4,
+      "dialogue": [
+        {
+          "turn": 1,
+          "user": "Hello!",
+          "assistant": "Hello! Welcome to Vaani. How can I help you today?",
+          "route": "direct",
+          "awaiting": null
+        },
+        {
+          "turn": 2,
+          "user": "Who won the cricket world cup and can you write a Python sorting script for me?",
+          "assistant": "I'm Vaani, your customer support assistant. I can help with orders, deliveries, returns, refunds, products and company policies.",
+          "route": "direct",
+          "awaiting": null
+        },
+        {
+          "turn": 3,
+          "user": "Okay, tell me what VoltKart Protect is and which products are eligible for it.",
+          "assistant": "I'm Vaani, your customer support assistant. I can help with orders, deliveries, returns, refunds, products and company policies.",
+          "route": "direct",
+          "awaiting": null
+        },
+        {
+          "turn": 4,
+          "user": "Can I get a refund on the VoltKart Protect plan if I cancel it within 5 days without making a claim?",
+          "assistant": "Yes, you can get a full refund on the VoltKart Protect plan if you cancel it within 7 days of purchase and no claim has been made. Since 5 days is within the 7-day window, you are eligible for a refund. [S1] [S2]",
+          "route": "rag",
+          "awaiting": null
+        }
+      ],
+      "metrics": {
+        "conversation_relevancy": {
+          "score": 0.5,
+          "passed": false,
+          "reason": "The score is 0.5 because in message 2, the assistant 'strictly limiting its scope to customer support topics' failed to address the user's specific questions about cricket and Python coding, and in message 3, the assistant provided a 'generic introduction of its role and capabilities' instead of answering the specific query about 'VoltKart Protect'."
+        },
+        "knowledge_retention": {
+          "score": 0.0,
+          "passed": false,
+          "reason": "The score is 0.00 because the LLM states the refund window is 7 days, but the Previous Knowledge explicitly states the condition is to cancel within 5 days."
+        },
+        "conversation_completeness": {
+          "score": 0.2,
+          "passed": false,
+          "reason": "The score is 0.2 because the LLM response failed to address the User's specific requests for information on the cricket world cup winner, a Python sorting script, and details regarding VoltKart Protect, instead repeatedly providing a generic introduction stating it is a customer support assistant for 'Vaani' who can help with orders, deliveries, returns, refunds, products and company policies. While the response did not explicitly address the refund policy question, it also failed to provide the requested definitions or coding assistance, leaving the majority of the User's intentions unmet."
+        },
+        "role_adherence": {
+          "score": 0.75,
+          "passed": true,
+          "reason": "The score is 0.75 because the LLM chatbot response in turn #8, 'Yes, you can get a full refund on the VoltKart Protect plan if you cancel it within 7 days of purchase and no claim has been made. Since 5 days is within the 7-day window, you are eligible for a refund.', fails to adhere to the role's requirement to answer questions strictly based on VoltKart's policies without inventing facts. The response asserts specific policy details (a 7-day window for the 'VoltKart Protect plan') that are not provided in the context, constituting a hallucination of policy terms. Additionally, the response is entirely in English, whereas the role specifies Vaani is a bilingual (English and Hinglish) assistant, and the lack of Hinglish elements or polite grounding typical of the persona slightly reduces adherence."
+        }
+      }
+    }
+  ]
+}

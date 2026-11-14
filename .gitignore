@@ -1,0 +1,15 @@
+data/vaani_support.db*
+__pycache__/
+.pytest_cache/
+*.py[cod]
+*$py.class
+
+vaani
+.env
+.deepeval/
+
+# macOS
+.DS_Store
+
+# some questions to test locally 
+eval_questions.jsonl

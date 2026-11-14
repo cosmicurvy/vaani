@@ -1,0 +1,57 @@
+[
+  {
+    "id": "conv_01_en_coreference",
+    "description": "English multi-turn RAG testing QueryRewriter pronoun resolution and memory retention",
+    "language": "en",
+    "user_turns": [
+      "Hi, I bought a laptop from VoltKart yesterday and I want to know its return window.",
+      "Can I return it if I just changed my mind and haven't opened the box?",
+      "Is there any pickup fee if I return it for that reason?",
+      "What about the warranty on its battery and adapter if I decide to keep it?"
+    ]
+  },
+  {
+    "id": "conv_02_hinglish_coreference",
+    "description": "Hinglish multi-turn RAG testing cross-lingual follow-up query rewriting",
+    "language": "hinglish",
+    "user_turns": [
+      "Namaste, maine 50 inch ka TV order kiya hai. Kya iska installation free hai?",
+      "Kya iske saath box mein wall mount bracket bhi aata hai?",
+      "Agar mujhe bracket alag se lena ho aur wall par fit karwana ho to total kitna charge lagega?",
+      "Technician delivery ke kitne din baad visit karta hai?"
+    ]
+  },
+  {
+    "id": "conv_03_order_lookup_flow",
+    "description": "Multi-step stateful slot-filling for order tracking (awaiting_order_id -> awaiting_order_verification)",
+    "language": "en",
+    "user_turns": [
+      "Where is my order?",
+      "VK10001",
+      "Aarav Sharma, Delhi"
+    ]
+  },
+  {
+    "id": "conv_04_topic_switch_recovery",
+    "description": "Tests escaping a pending order verification state when the user switches to a policy question",
+    "language": "hinglish",
+    "user_turns": [
+      "Where is my order VK10001?",
+      "Urvashi, Mumbai",
+      "Koi baat nahi, mujhe ye batao ki UPI refund aane mein kitne business days lagte hain?",
+      "Aur agar main refund VoltKart Wallet mein loon to kya koi bonus milta hai?",
+      "Bye"
+    ]
+  },
+  {
+    "id": "conv_05_role_adherence_and_guardrails",
+    "description": "Tests Role Adherence when user asks off-topic questions and then asks about VoltKart Protect",
+    "language": "en",
+    "user_turns": [
+      "Hello!",
+      "Who won the cricket world cup and can you write a Python sorting script for me?",
+      "Okay, tell me what VoltKart Protect is and which products are eligible for it.",
+      "Can I get a refund on the VoltKart Protect plan if I cancel it within 5 days without making a claim?"
+    ]
+  }
+]

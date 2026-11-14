@@ -1,0 +1,562 @@
+[
+  {
+    "id": "ret_window_phone",
+    "category": "returns",
+    "source": "return_exchange_policy.pdf",
+    "question_en": "How many days do I have to return a smartphone?",
+    "question_hinglish": "Smartphone return karne ke liye kitne din milte hain?",
+    "answer_en": "Smartphones and tablets can be returned within 7 days of delivery, if they are defective, damaged or the wrong item."
+  },
+  {
+    "id": "ret_com_phone",
+    "category": "returns",
+    "source": "return_exchange_policy.pdf",
+    "question_en": "Can I return a phone if I just changed my mind?",
+    "question_hinglish": "Agar mera mann badal gaya to kya main phone return kar sakta hoon?",
+    "answer_en": "No. Change-of-mind returns are not accepted for smartphones and tablets. You can return them only if they are defective, damaged or the wrong item."
+  },
+  {
+    "id": "ret_laptop",
+    "category": "returns",
+    "source": "return_exchange_policy.pdf",
+    "question_en": "What is the return policy for laptops?",
+    "question_hinglish": "Laptop ki return policy kya hai?",
+    "answer_en": "Laptops, desktops and monitors have a 10-day return window. A defective, damaged or wrong item is replaced. A change-of-mind return is accepted only if the product is sealed and unopened."
+  },
+  {
+    "id": "ret_earbuds",
+    "category": "returns",
+    "source": "return_exchange_policy.pdf",
+    "question_en": "Can I return earbuds after opening the box?",
+    "question_hinglish": "Kya main box kholne ke baad earbuds return kar sakta hoon?",
+    "answer_en": "Earbuds have a 10-day window. A change-of-mind return is accepted only if the hygiene seal is intact. Once the hygiene seal is broken, only defective units can be returned."
+  },
+  {
+    "id": "ret_tv",
+    "category": "returns",
+    "source": "return_exchange_policy.pdf",
+    "question_en": "What if my TV has a problem? Can I return it?",
+    "question_hinglish": "Agar mere TV mein problem hai to kya main use return kar sakta hoon?",
+    "answer_en": "Televisions have a 10-day return window. For a defect, a brand technician checks the TV first and then it is replaced. Change-of-mind returns are not accepted for TVs."
+  },
+  {
+    "id": "ret_accessory",
+    "category": "returns",
+    "source": "return_exchange_policy.pdf",
+    "question_en": "Can I return a charger or cable I don't need?",
+    "question_hinglish": "Kya main jo charger ya cable mujhe nahi chahiye use return kar sakta hoon?",
+    "answer_en": "Yes. Accessories such as cables, chargers, cases and power banks can be returned within 15 days if they are unused and in the original packaging."
+  },
+  {
+    "id": "ret_damaged_report",
+    "category": "returns",
+    "source": "return_exchange_policy.pdf",
+    "question_en": "My product arrived damaged. What should I do?",
+    "question_hinglish": "Mera product damaged aaya hai. Mujhe kya karna chahiye?",
+    "answer_en": "Report it within 48 hours of delivery in My Orders, with clear photos and an unboxing video that shows the sealed package being opened. Pickup is free and the item is replaced."
+  },
+  {
+    "id": "ret_wrong_item",
+    "category": "returns",
+    "source": "return_exchange_policy.pdf",
+    "question_en": "I received the wrong item. How do I get the correct one?",
+    "question_hinglish": "Mujhe galat item mil gaya hai. Sahi item kaise milega?",
+    "answer_en": "Report the wrong item within 48 hours of delivery with photos and an unboxing video. VoltKart picks it up for free and sends a replacement, subject to stock. If it is out of stock, you get a full refund."
+  },
+  {
+    "id": "ret_nonreturnable",
+    "category": "returns",
+    "source": "return_exchange_policy.pdf",
+    "question_en": "Which products cannot be returned?",
+    "question_hinglish": "Kaun se products return nahi ho sakte?",
+    "answer_en": "Gift cards, software licences and download codes, earbuds with a broken hygiene seal (unless defective), products with a removed or mismatched serial number or IMEI, customer-damaged products, opened printer ink or toner, and items marked Final Sale or Non-returnable."
+  },
+  {
+    "id": "ret_pickup_fee",
+    "category": "returns",
+    "source": "return_exchange_policy.pdf",
+    "question_en": "Is there a charge for return pickup?",
+    "question_hinglish": "Kya return pickup ka koi charge lagta hai?",
+    "answer_en": "Pickup is free for defective, damaged and wrong items. For change-of-mind returns, a ₹99 pickup fee is deducted from your refund. Dropping the parcel at a VoltKart partner pickup point is always free."
+  },
+  {
+    "id": "ret_conditions",
+    "category": "returns",
+    "source": "return_exchange_policy.pdf",
+    "question_en": "What should I do before returning my phone?",
+    "question_hinglish": "Phone return karne se pehle mujhe kya karna chahiye?",
+    "answer_en": "Pack it in the original box with all accessories, charger, manuals, free gifts and the invoice. Remove all account locks such as Apple ID or Google account, remove the SIM and memory card, and factory reset the phone. The IMEI must match what we shipped."
+  },
+  {
+    "id": "ret_exchange_model",
+    "category": "returns",
+    "source": "return_exchange_policy.pdf",
+    "question_en": "Can I exchange my product for a different model?",
+    "question_hinglish": "Kya main apna product kisi dusre model se exchange kar sakta hoon?",
+    "answer_en": "No. Replacement is only for the same model and colour. For a different model, return the original item and place a new order."
+  },
+  {
+    "id": "ret_replacement_defective",
+    "category": "returns",
+    "source": "return_exchange_policy.pdf",
+    "question_en": "What if the replacement is also defective?",
+    "question_hinglish": "Agar replacement bhi kharab nikla to kya hoga?",
+    "answer_en": "Each order item can be replaced only once. If the replacement is also defective, you receive a refund."
+  },
+  {
+    "id": "ret_how",
+    "category": "returns",
+    "source": "return_exchange_policy.pdf",
+    "question_en": "How do I raise a return request?",
+    "question_hinglish": "Main return request kaise daalun?",
+    "answer_en": "Open My Orders in the VoltKart app, select the item and tap Return or Replace, then choose the reason and upload photos or video if needed. Requests are approved or rejected within 24 hours, and pickup happens within 2 business days with 3 attempts."
+  },
+  {
+    "id": "ret_qc_fail",
+    "category": "returns",
+    "source": "return_exchange_policy.pdf",
+    "question_en": "What happens if my returned item fails the quality check?",
+    "question_hinglish": "Agar mera returned item quality check mein fail ho jaye to kya hoga?",
+    "answer_en": "The return is rejected and the item is sent back to you. A reverse shipping fee of ₹149 may be charged. Typical reasons are customer-caused damage or a mismatched IMEI."
+  },
+  {
+    "id": "ret_missing_accessory",
+    "category": "returns",
+    "source": "return_exchange_policy.pdf",
+    "question_en": "What if I forget to send some accessories with my return?",
+    "question_hinglish": "Agar main return ke saath kuch accessories bhejna bhool jaun to?",
+    "answer_en": "The refund may be reduced by the MRP of the missing accessory or free gift, or the return may be rejected."
+  },
+  {
+    "id": "ref_upi_time",
+    "category": "refunds",
+    "source": "refund_policy.pdf",
+    "question_en": "How long does a UPI refund take?",
+    "question_hinglish": "UPI refund aane mein kitna time lagta hai?",
+    "answer_en": "A UPI refund reaches your account in 1 to 3 business days after the refund is initiated."
+  },
+  {
+    "id": "ref_card_time",
+    "category": "refunds",
+    "source": "refund_policy.pdf",
+    "question_en": "How long does a card or net banking refund take?",
+    "question_hinglish": "Card ya net banking refund mein kitna time lagta hai?",
+    "answer_en": "Credit card, debit card and net banking refunds take 5 to 7 business days after the refund is initiated."
+  },
+  {
+    "id": "ref_cod",
+    "category": "refunds",
+    "source": "refund_policy.pdf",
+    "question_en": "How do I get a refund for a Cash on Delivery order?",
+    "question_hinglish": "Cash on Delivery order ka refund kaise milega?",
+    "answer_en": "You can choose the VoltKart Wallet, which is instant, or a bank transfer by NEFT or IMPS, which takes 3 to 5 business days after your bank details are verified."
+  },
+  {
+    "id": "ref_emi",
+    "category": "refunds",
+    "source": "refund_policy.pdf",
+    "question_en": "What happens to my EMI when I return a product?",
+    "question_hinglish": "Product return karne par meri EMI ka kya hoga?",
+    "answer_en": "For card EMI, the principal is refunded to your card in 7 to 10 business days. The interest and processing fee are handled by your bank and may be reversed over 1 to 2 statement cycles. Foreclosure charges, if any, are decided by the bank."
+  },
+  {
+    "id": "ref_when_start",
+    "category": "refunds",
+    "source": "refund_policy.pdf",
+    "question_en": "When does my refund get started after I return an item?",
+    "question_hinglish": "Item return karne ke baad mera refund kab start hota hai?",
+    "answer_en": "The refund is initiated within 24 hours after your item passes quality check. The quality check takes up to 2 business days after the item reaches our warehouse."
+  },
+  {
+    "id": "ref_wallet_bonus",
+    "category": "refunds",
+    "source": "refund_policy.pdf",
+    "question_en": "Is there a bonus for taking the refund in VoltKart Wallet?",
+    "question_hinglish": "Kya VoltKart Wallet mein refund lene par koi bonus milta hai?",
+    "answer_en": "Yes. You get a 1% bonus on the refund amount, up to ₹100. The bonus expires after 90 days, while the main wallet balance does not expire."
+  },
+  {
+    "id": "ref_shipping_fee",
+    "category": "refunds",
+    "source": "refund_policy.pdf",
+    "question_en": "Will my shipping fee be refunded?",
+    "question_hinglish": "Kya meri shipping fee wapas hogi?",
+    "answer_en": "The shipping fee is refunded only for defective, damaged or wrong items, for orders cancelled before shipping, and for orders that cannot be delivered. It is not refunded for change-of-mind returns."
+  },
+  {
+    "id": "ref_coupon",
+    "category": "refunds",
+    "source": "refund_policy.pdf",
+    "question_en": "What happens to my coupon discount when I return something?",
+    "question_hinglish": "Kuch return karne par mere coupon discount ka kya hota hai?",
+    "answer_en": "You are refunded the amount you actually paid, after the coupon discount. The coupon is not re-issued, except when the return is because of a defect or a wrong item."
+  },
+  {
+    "id": "ref_not_received",
+    "category": "refunds",
+    "source": "refund_policy.pdf",
+    "question_en": "My refund has not arrived even after the promised time. What do I do?",
+    "question_hinglish": "Promised time ke baad bhi mera refund nahi aaya. Mujhe kya karna chahiye?",
+    "answer_en": "Wait 2 business days beyond the timeline, then contact support with your order ID. For UPI, card and net banking, My Orders > Refund details shows an ARN. Share it with your bank to trace the refund."
+  },
+  {
+    "id": "ref_failed_payment",
+    "category": "refunds",
+    "source": "refund_policy.pdf",
+    "question_en": "Money was deducted but my order was not placed. What now?",
+    "question_hinglish": "Paise kat gaye lekin mera order place nahi hua. Ab kya karun?",
+    "answer_en": "The amount is reversed automatically: 1 to 3 business days for UPI and 5 to 7 business days for cards and net banking."
+  },
+  {
+    "id": "ref_cod_fee",
+    "category": "refunds",
+    "source": "refund_policy.pdf",
+    "question_en": "Is the COD handling fee refundable?",
+    "question_hinglish": "Kya COD handling fee refund hoti hai?",
+    "answer_en": "No. The ₹40 COD handling fee is not refundable."
+  },
+  {
+    "id": "ship_free",
+    "category": "shipping",
+    "source": "shipping_delivery_policy.pdf",
+    "question_en": "What are the shipping charges?",
+    "question_hinglish": "Shipping charges kitne hain?",
+    "answer_en": "Shipping is free on orders of ₹999 and above. Below ₹999, a ₹59 shipping fee applies."
+  },
+  {
+    "id": "ship_time",
+    "category": "shipping",
+    "source": "shipping_delivery_policy.pdf",
+    "question_en": "How many days does delivery take?",
+    "question_hinglish": "Delivery mein kitne din lagte hain?",
+    "answer_en": "Metro cities take 2 to 4 business days, other cities and towns take 4 to 7 business days, and remote or rural areas take 7 to 10 business days. TVs of 40 inches and above take 4 to 8 business days in a scheduled slot."
+  },
+  {
+    "id": "ship_express",
+    "category": "shipping",
+    "source": "shipping_delivery_policy.pdf",
+    "question_en": "Do you offer same-day or express delivery?",
+    "question_hinglish": "Kya aap same-day ya express delivery dete hain?",
+    "answer_en": "Yes, in 8 metro cities for items with the Express badge, for a ₹149 fee. Orders placed before 12 noon arrive the same day and later orders arrive the next day. TVs above 43 inches are not eligible."
+  },
+  {
+    "id": "ship_cod_limit",
+    "category": "shipping",
+    "source": "shipping_delivery_policy.pdf",
+    "question_en": "Is Cash on Delivery available? Is there a limit?",
+    "question_hinglish": "Kya Cash on Delivery available hai? Koi limit hai kya?",
+    "answer_en": "COD is available for orders up to ₹20,000 in COD-enabled pin codes, with a ₹40 handling fee. You can pay by cash or a UPI QR code. If you refuse two COD orders, COD may be disabled on your account."
+  },
+  {
+    "id": "ship_otp",
+    "category": "shipping",
+    "source": "shipping_delivery_policy.pdf",
+    "question_en": "Why is OTP and ID verification needed at delivery?",
+    "question_hinglish": "Delivery par OTP aur ID verification kyun zaroori hai?",
+    "answer_en": "Orders of ₹30,000 and above are delivered only to the named recipient after OTP verification and a government photo ID check, for security."
+  },
+  {
+    "id": "ship_delay",
+    "category": "shipping",
+    "source": "shipping_delivery_policy.pdf",
+    "question_en": "My order is late. What compensation do I get?",
+    "question_hinglish": "Mera order late ho gaya hai. Mujhe kya compensation milega?",
+    "answer_en": "If the order arrives more than 3 business days after the estimated delivery date, ₹100 is credited to your VoltKart Wallet automatically. You can also cancel the delayed order for a full refund."
+  },
+  {
+    "id": "ship_address",
+    "category": "shipping",
+    "source": "shipping_delivery_policy.pdf",
+    "question_en": "Can I change my delivery address?",
+    "question_hinglish": "Kya main apna delivery address change kar sakta hoon?",
+    "answer_en": "You can edit the address in My Orders only before the order is shipped, and the pin code cannot be changed. After shipping, the address cannot be changed."
+  },
+  {
+    "id": "ship_attempts",
+    "category": "shipping",
+    "source": "shipping_delivery_policy.pdf",
+    "question_en": "What if I am not home when the courier comes?",
+    "question_hinglish": "Agar courier aaye aur main ghar par na rahun to?",
+    "answer_en": "The delivery partner makes 3 attempts over 3 days. If delivery fails, the parcel returns to us. For prepaid orders, the refund is initiated within 2 business days after the parcel reaches our warehouse."
+  },
+  {
+    "id": "ship_track",
+    "category": "shipping",
+    "source": "shipping_delivery_policy.pdf",
+    "question_en": "How can I track my order?",
+    "question_hinglish": "Main apna order kaise track karun?",
+    "answer_en": "A tracking link is sent by SMS and WhatsApp when the order ships. You can also open My Orders > Track."
+  },
+  {
+    "id": "ship_international",
+    "category": "shipping",
+    "source": "shipping_delivery_policy.pdf",
+    "question_en": "Do you deliver outside India?",
+    "question_hinglish": "Kya aap India ke bahar delivery karte hain?",
+    "answer_en": "No. VoltKart delivers only within India and does not offer international shipping."
+  },
+  {
+    "id": "ship_tampered",
+    "category": "shipping",
+    "source": "shipping_delivery_policy.pdf",
+    "question_en": "The package looks opened. What should I do?",
+    "question_hinglish": "Package khula hua lag raha hai. Mujhe kya karna chahiye?",
+    "answer_en": "Refuse the delivery, tell the delivery partner and contact support immediately. For damage found after opening, record an unboxing video and report within 48 hours of delivery."
+  },
+  {
+    "id": "ship_dispatch",
+    "category": "shipping",
+    "source": "shipping_delivery_policy.pdf",
+    "question_en": "When will my order be dispatched?",
+    "question_hinglish": "Mera order kab dispatch hoga?",
+    "answer_en": "Orders are dispatched within 1 business day. Orders placed after 6 PM, on Sundays or on public holidays are processed on the next business day. Business days are Monday to Saturday."
+  },
+  {
+    "id": "can_before_ship",
+    "category": "cancellation",
+    "source": "cancellation_policy.md",
+    "question_en": "Can I cancel my order?",
+    "question_hinglish": "Kya main apna order cancel kar sakta hoon?",
+    "answer_en": "Yes, for free from My Orders > Cancel while the order is in Processing or Packed status. Prepaid orders are refunded as per the Refund Policy timelines."
+  },
+  {
+    "id": "can_after_ship",
+    "category": "cancellation",
+    "source": "cancellation_policy.md",
+    "question_en": "My order has already shipped. Can I still cancel?",
+    "question_hinglish": "Mera order ship ho chuka hai. Kya main ab bhi cancel kar sakta hoon?",
+    "answer_en": "Shipped orders cannot be cancelled in the app. You can refuse the delivery, and the refund for a prepaid order starts within 2 business days after the parcel reaches our warehouse. Or accept it and raise a return if it is eligible."
+  },
+  {
+    "id": "can_preorder",
+    "category": "cancellation",
+    "source": "cancellation_policy.md",
+    "question_en": "Can I cancel a pre-order?",
+    "question_hinglish": "Kya main pre-order cancel kar sakta hoon?",
+    "answer_en": "Yes, until 24 hours before the scheduled dispatch date."
+  },
+  {
+    "id": "can_bto",
+    "category": "cancellation",
+    "source": "cancellation_policy.md",
+    "question_en": "Can I cancel a build-to-order laptop?",
+    "question_hinglish": "Kya main build-to-order laptop cancel kar sakta hoon?",
+    "answer_en": "Only within 2 hours of placing the order. This applies to all build-to-order and customised products."
+  },
+  {
+    "id": "can_payment_pending",
+    "category": "cancellation",
+    "source": "cancellation_policy.md",
+    "question_en": "What happens if my payment is stuck as pending?",
+    "question_hinglish": "Agar mera payment pending mein atak jaye to kya hoga?",
+    "answer_en": "If payment is not confirmed within 30 minutes, the order is cancelled automatically and the stock is released."
+  },
+  {
+    "id": "can_partial",
+    "category": "cancellation",
+    "source": "cancellation_policy.md",
+    "question_en": "Can I cancel just one item from my order?",
+    "question_hinglish": "Kya main apne order mein se sirf ek item cancel kar sakta hoon?",
+    "answer_en": "Yes, before it ships. If the remaining order falls below ₹999, the ₹59 shipping fee is deducted from the refund."
+  },
+  {
+    "id": "can_by_store",
+    "category": "cancellation",
+    "source": "cancellation_policy.md",
+    "question_en": "Why did VoltKart cancel my order?",
+    "question_hinglish": "VoltKart ne mera order kyun cancel kar diya?",
+    "answer_en": "VoltKart can cancel an order because of a stock error, a pricing error or suspected fraud. You receive a full refund, initiated immediately."
+  },
+  {
+    "id": "war_phone",
+    "category": "warranty",
+    "source": "warranty_policy.pdf",
+    "question_en": "How long is the warranty on a smartphone?",
+    "question_hinglish": "Smartphone par kitni warranty milti hai?",
+    "answer_en": "Smartphones and tablets have 12 months of warranty on the device and 6 months on the accessories in the box, such as the charger, cable and earphones."
+  },
+  {
+    "id": "war_tv",
+    "category": "warranty",
+    "source": "warranty_policy.pdf",
+    "question_en": "What is the warranty on a television?",
+    "question_hinglish": "Television par warranty kitni hai?",
+    "answer_en": "Televisions have 12 months of comprehensive warranty and 24 months on the panel."
+  },
+  {
+    "id": "war_laptop_battery",
+    "category": "warranty",
+    "source": "warranty_policy.pdf",
+    "question_en": "Is my laptop battery covered under warranty?",
+    "question_hinglish": "Kya mere laptop ki battery warranty mein aati hai?",
+    "answer_en": "Laptops have 12 months of warranty, but the battery and adapter are covered for 6 months."
+  },
+  {
+    "id": "war_not_covered",
+    "category": "warranty",
+    "source": "warranty_policy.pdf",
+    "question_en": "What is not covered under warranty?",
+    "question_hinglish": "Warranty mein kya cover nahi hota?",
+    "answer_en": "Physical damage, cracked screens and liquid damage, repairs by unauthorised persons, power surge damage, normal cosmetic wear, software problems from unofficial firmware or rooting, and products with a tampered or missing serial number."
+  },
+  {
+    "id": "war_claim",
+    "category": "warranty",
+    "source": "warranty_policy.pdf",
+    "question_en": "How do I make a warranty claim?",
+    "question_hinglish": "Main warranty claim kaise karun?",
+    "answer_en": "Download your invoice from My Orders > Invoice, then raise a warranty request in the app or visit a brand service centre shown in the app. Repairs usually take 7 to 15 business days."
+  },
+  {
+    "id": "war_doa",
+    "category": "warranty",
+    "source": "warranty_policy.pdf",
+    "question_en": "My device is dead on arrival. What now?",
+    "question_hinglish": "Mera device aate hi dead hai. Ab kya karun?",
+    "answer_en": "Report it within the return window of its category (7 or 10 days). For phones, tablets, laptops and TVs, a brand DOA certificate may be needed. VoltKart arranges the inspection within 2 business days and ships the replacement within 3 to 5 business days after receiving the certificate."
+  },
+  {
+    "id": "war_repair_delay",
+    "category": "warranty",
+    "source": "warranty_policy.pdf",
+    "question_en": "My product has been at the service centre for over a month. What can I do?",
+    "question_hinglish": "Mera product ek mahine se zyada se service centre mein hai. Main kya kar sakta hoon?",
+    "answer_en": "If it is not repaired within 30 days of reaching the service centre, escalate to VoltKart. We follow up with the brand for a replacement or refund as per the brand terms."
+  },
+  {
+    "id": "war_protect",
+    "category": "warranty",
+    "source": "warranty_policy.pdf",
+    "question_en": "What is VoltKart Protect?",
+    "question_hinglish": "VoltKart Protect kya hai?",
+    "answer_en": "An optional plan that covers accidental damage such as cracked screens and liquid damage for 12 months from purchase, for eligible products priced ₹3,000 and above. Buy it at checkout or within 7 days of delivery. It allows one claim per plan with no deductible, and is fully refundable within 7 days if no claim is made."
+  },
+  {
+    "id": "war_starts",
+    "category": "warranty",
+    "source": "warranty_policy.pdf",
+    "question_en": "When does my warranty start?",
+    "question_hinglish": "Meri warranty kab se shuru hoti hai?",
+    "answer_en": "The warranty starts on the date of delivery. Repairs are done by the brand service centre, and VoltKart helps you follow up."
+  },
+  {
+    "id": "inst_tv_free",
+    "category": "installation",
+    "source": "installation_setup_policy.pdf",
+    "question_en": "Is TV installation free?",
+    "question_hinglish": "Kya TV installation free hai?",
+    "answer_en": "Yes, free demo and installation by the brand technician is provided for TVs of 32 inches and above, and basic setup for soundbars and home theatre systems."
+  },
+  {
+    "id": "inst_bracket",
+    "category": "installation",
+    "source": "installation_setup_policy.pdf",
+    "question_en": "Does the TV come with a wall mount?",
+    "question_hinglish": "Kya TV ke saath wall mount aata hai?",
+    "answer_en": "Usually not. A table stand is in the box. Brackets cost ₹799 for 32 to 43 inch, ₹1,299 for 44 to 55 inch and ₹1,799 for 56 inch and above. The technician charges ₹399 to fit the bracket on the wall."
+  },
+  {
+    "id": "inst_time",
+    "category": "installation",
+    "source": "installation_setup_policy.pdf",
+    "question_en": "When will the installation technician visit?",
+    "question_hinglish": "Installation technician kab aayega?",
+    "answer_en": "The technician calls within 24 hours of delivery and visits within 3 business days, or up to 5 business days in non-metro areas. You can reschedule up to 2 times for free."
+  },
+  {
+    "id": "inst_tv_damage",
+    "category": "installation",
+    "source": "installation_setup_policy.pdf",
+    "question_en": "I think my TV panel is damaged. Should I install it?",
+    "question_hinglish": "Mujhe lagta hai mere TV ka panel damaged hai. Kya mujhe install karna chahiye?",
+    "answer_en": "No, do not start installation. Report the damage before installation or within 48 hours of delivery, whichever is earlier, so the brand technician can inspect it."
+  },
+  {
+    "id": "pay_methods",
+    "category": "payments",
+    "source": "faq.json",
+    "question_en": "Which payment methods do you accept?",
+    "question_hinglish": "Aap kaun se payment methods accept karte hain?",
+    "answer_en": "UPI, credit and debit cards, net banking, VoltKart Wallet, gift cards, EMI and Cash on Delivery (up to ₹20,000)."
+  },
+  {
+    "id": "pay_emi",
+    "category": "payments",
+    "source": "faq.json",
+    "question_en": "Is EMI available and from what amount?",
+    "question_hinglish": "Kya EMI available hai aur kitne amount se?",
+    "answer_en": "Credit card EMI is available on orders of ₹3,000 and above for 3, 6, 9 or 12 months. No-Cost EMI is available on select products for 3 and 6 months. Debit card EMI starts at ₹5,000 for select banks, and cardless EMI via partner NBFCs starts at ₹10,000."
+  },
+  {
+    "id": "pay_bank_offer",
+    "category": "offers",
+    "source": "faq.json",
+    "question_en": "Is there any bank offer on expensive products?",
+    "question_hinglish": "Kya mehange products par koi bank offer hai?",
+    "answer_en": "Partner bank cards give a 10% instant discount up to ₹1,500 on orders of ₹10,000 and above, on select products."
+  },
+  {
+    "id": "pay_coupon",
+    "category": "offers",
+    "source": "faq.json",
+    "question_en": "Can I use more than one coupon on an order?",
+    "question_hinglish": "Kya main ek order par ek se zyada coupon use kar sakta hoon?",
+    "answer_en": "No. Only one coupon can be used per order. Coupons cannot be used on gift cards."
+  },
+  {
+    "id": "pay_price_drop",
+    "category": "offers",
+    "source": "faq.json",
+    "question_en": "The price dropped after I bought. Can I get the difference back?",
+    "question_hinglish": "Kharidne ke baad price kam ho gaya. Kya mujhe difference wapas milega?",
+    "answer_en": "No. VoltKart does not offer price protection or price adjustment after purchase."
+  },
+  {
+    "id": "pay_gst",
+    "category": "payments",
+    "source": "faq.json",
+    "question_en": "How do I get a GST invoice for my business?",
+    "question_hinglish": "Apne business ke liye GST invoice kaise paun?",
+    "answer_en": "Enter your GSTIN at checkout, or add it in My Orders before the order is shipped. The invoice is available in My Orders > Invoice after delivery."
+  },
+  {
+    "id": "sup_hours",
+    "category": "support",
+    "source": "faq.json",
+    "question_en": "What are your customer support hours?",
+    "question_hinglish": "Aapke customer support ka time kya hai?",
+    "answer_en": "Support is available every day from 8 AM to 10 PM IST through the app, the voice assistant and phone."
+  },
+  {
+    "id": "sup_human",
+    "category": "support",
+    "source": "faq.json",
+    "question_en": "How can I talk to a human agent?",
+    "question_hinglish": "Main kisi human agent se kaise baat kar sakta hoon?",
+    "answer_en": "Say 'talk to an agent' at any point, or tap Talk to a human in the app. The assistant passes a summary of your issue so you do not have to repeat yourself."
+  },
+  {
+    "id": "sup_ticket",
+    "category": "support",
+    "source": "faq.json",
+    "question_en": "How long does it take to resolve a support ticket?",
+    "question_hinglish": "Support ticket solve hone mein kitna time lagta hai?",
+    "answer_en": "You get a first response within 24 hours. Complex cases can take up to 3 business days to resolve."
+  },
+  {
+    "id": "acct_wallet",
+    "category": "payments",
+    "source": "faq.json",
+    "question_en": "Does my VoltKart Wallet balance expire?",
+    "question_hinglish": "Kya mera VoltKart Wallet balance expire ho jata hai?",
+    "answer_en": "The main wallet balance does not expire. Bonus cash from refunds expires after 90 days."
+  },
+  {
+    "id": "prod_authentic",
+    "category": "products",
+    "source": "faq.json",
+    "question_en": "Are the products genuine and do they carry brand warranty?",
+    "question_hinglish": "Kya products original hain aur kya unpar brand warranty milti hai?",
+    "answer_en": "Yes. All products are sold by authorised sellers and carry the manufacturer warranty, which starts on the delivery date."
+  }
+]

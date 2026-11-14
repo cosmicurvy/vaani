@@ -1,0 +1,722 @@
+{
+  "judge_model": "Groq (qwen/qwen3.8-27b)",
+  "total_test_cases": 12,
+  "threshold": 0.7,
+  "average_scores": {
+    "faithfulness": 1.0,
+    "answer_relevancy": 0.9722,
+    "contextual_relevancy": 0.5273,
+    "contextual_precision": 0.9861,
+    "contextual_recall": 1.0
+  },
+  "test_cases": [
+    {
+      "id": "rag_01",
+      "language": "en",
+      "question": "Can I return earbuds if I changed my mind, and is there any pickup fee?",
+      "expected_output": "Earbuds have a 10-day return window. A change-of-mind return is accepted only if the hygiene seal is intact (once broken, only defective units can be returned). For change-of-mind returns, a ₹99 reverse pickup fee is deducted from your refund, whereas dropping the parcel at a VoltKart partner pickup point is free.",
+      "actual_output": "Yes, you can return earbuds if you changed your mind, provided the hygiene seal is intact and the return is within 10 days. A ₹99 pickup fee will be deducted from your refund for change-of-mind returns, though dropping the parcel at a VoltKart partner pickup point is free. [S1] [S2] [S3]",
+      "supported": true,
+      "citations": [
+        {
+          "source_id": "S1",
+          "source": "return_exchange_policy.pdf",
+          "page": null,
+          "faq_id": "ret_earbuds",
+          "category": "returns",
+          "language": "en",
+          "source_type": "faq"
+        },
+        {
+          "source_id": "S2",
+          "source": "return_exchange_policy.pdf",
+          "page": null,
+          "faq_id": "ret_pickup_fee",
+          "category": "returns",
+          "language": "en",
+          "source_type": "faq"
+        },
+        {
+          "source_id": "S3",
+          "source": "refund_policy.pdf",
+          "page": 1,
+          "faq_id": null,
+          "category": null,
+          "language": null,
+          "source_type": "policy"
+        }
+      ],
+      "retrieved_chunks_count": 3,
+      "metrics": {
+        "faithfulness": {
+          "score": 1.0,
+          "passed": true,
+          "reason": "The score is 1.00 because the actual output is perfectly faithful to the retrieval context, with no contradictions detected. Great job maintaining accuracy!"
+        },
+        "answer_relevancy": {
+          "score": 1.0,
+          "passed": true,
+          "reason": "The score is 1.00 because the response directly addresses the user's questions regarding the return policy and pickup fees without including any irrelevant information."
+        },
+        "contextual_relevancy": {
+          "score": 0.6667,
+          "passed": false,
+          "reason": "The score is 0.67 because while the context provides specific answers regarding the '10-day window', 'hygiene seal' requirement, and '₹99 pickup fee' for change-of-mind returns, it is diluted by irrelevant details about 'defective, damaged and wrong items', non-refundable 'COD handling fee', and 'Coupons'."
+        },
+        "contextual_precision": {
+          "score": 1.0,
+          "passed": true,
+          "reason": "The score is 1.00 because all retrieved nodes are highly relevant and perfectly ranked. The first node directly addresses the return window and conditions, the second confirms the specific pickup fee details, and the third provides further supporting evidence for the fee structure, ensuring a flawless retrieval order."
+        },
+        "contextual_recall": {
+          "score": 1.0,
+          "passed": true,
+          "reason": "The score is 1.00 because every sentence in the expected output is fully supported by the nodes in retrieval context. Specifically, the 10-day return window and hygiene seal conditions are attributed to the 1st node in retrieval context, while the reverse pickup fee details are attributed to the 2nd node in retrieval context. With no unsupported claims, the recall is perfect!"
+        }
+      }
+    },
+    {
+      "id": "rag_02",
+      "language": "hinglish",
+      "question": "Mera product damaged aaya hai, mujhe kitne time mein report karna chahiye aur kya proof dena hoga?",
+      "expected_output": "Report the damaged product within 48 hours of delivery in My Orders with clear photos and an uncut unboxing video showing the sealed package being opened. Pickup is free and the item is replaced.",
+      "actual_output": "Aapko delivery ke 48 ghante ke andar report karna hoga. Iske liye aapko clear photos aur ek unboxing video deni hogi jisme dikhaya gaya ho ki sealed package kaise khula gaya. [S1] [S3]",
+      "supported": true,
+      "citations": [
+        {
+          "source_id": "S1",
+          "source": "return_exchange_policy.pdf",
+          "page": null,
+          "faq_id": "ret_damaged_report",
+          "category": "returns",
+          "language": "hinglish",
+          "source_type": "faq"
+        },
+        {
+          "source_id": "S3",
+          "source": "shipping_delivery_policy.pdf",
+          "page": null,
+          "faq_id": "ship_tampered",
+          "category": "shipping",
+          "language": "hinglish",
+          "source_type": "faq"
+        }
+      ],
+      "retrieved_chunks_count": 3,
+      "metrics": {
+        "faithfulness": {
+          "score": 1.0,
+          "passed": true,
+          "reason": "The score is 1.00 because the actual output is perfectly faithful to the retrieval context, with no contradictions detected. Great job maintaining accuracy!"
+        },
+        "answer_relevancy": {
+          "score": 1.0,
+          "passed": true,
+          "reason": "The score is 1.00 because the response is fully relevant and contains no irrelevant statements."
+        },
+        "contextual_relevancy": {
+          "score": 1.0,
+          "passed": true,
+          "reason": "The score is 1.00 because the context perfectly answers the user's query by specifying to 'Report it within 48 hours of delivery' and requiring 'clear photos and an unboxing video' as proof. Great job providing exactly what was needed!"
+        },
+        "contextual_precision": {
+          "score": 1.0,
+          "passed": true,
+          "reason": "The score is 1.00 because the most relevant node is ranked first, directly answering the user's query by stating to 'Report it within 48 hours of delivery in My Orders, with clear photos and an unboxing video that shows the sealed package being opened'. The subsequent nodes are irrelevant to the specific general question, as the second node addresses a 'TV panel and installation' and the third node lacks the complete instructions found in the top result."
+        },
+        "contextual_recall": {
+          "score": 1.0,
+          "passed": true,
+          "reason": "The score is 1.00 because every sentence in the expected output is fully supported by node 1 in retrieval context, which explicitly details the 48-hour reporting requirement, the need for photos and an unboxing video, and the free pickup with replacement policy. Great job capturing all the key details perfectly!"
+        }
+      }
+    },
+    {
+      "id": "rag_03",
+      "language": "en",
+      "question": "What happens if my returned item fails the warehouse quality check?",
+      "expected_output": "Quality check is completed within 2 business days after the item reaches the warehouse. If the returned item fails the quality check (for example, due to customer-caused damage or a mismatched IMEI), the return is rejected, the item is sent back to you, and a reverse shipping fee of ₹149 may be charged.",
+      "actual_output": "If your returned item fails the warehouse quality check, the return is rejected and the item is sent back to you. A reverse shipping fee of ₹149 may be charged. Common reasons for failure include customer-caused damage or a mismatched IMEI. [S1] [S2]",
+      "supported": true,
+      "citations": [
+        {
+          "source_id": "S1",
+          "source": "return_exchange_policy.pdf",
+          "page": null,
+          "faq_id": "ret_qc_fail",
+          "category": "returns",
+          "language": "en",
+          "source_type": "faq"
+        },
+        {
+          "source_id": "S2",
+          "source": "return_exchange_policy.pdf",
+          "page": 2,
+          "faq_id": null,
+          "category": null,
+          "language": null,
+          "source_type": "policy"
+        }
+      ],
+      "retrieved_chunks_count": 3,
+      "metrics": {
+        "faithfulness": {
+          "score": 1.0,
+          "passed": true,
+          "reason": "The score is 1.00 because the actual output is perfectly faithful to the retrieval context, with no contradictions detected. Great job maintaining accuracy!"
+        },
+        "answer_relevancy": {
+          "score": 1.0,
+          "passed": true,
+          "reason": "The score is 1.00 because the response is fully relevant and contains no irrelevant statements."
+        },
+        "contextual_relevancy": {
+          "score": 0.3478,
+          "passed": false,
+          "reason": "The score is 0.35 because while the context contains relevant statements like 'the return is rejected and the item is sent back to you' and 'A reverse shipping fee of ₹149 may be charged', it is heavily diluted by irrelevant information regarding 'Open My Orders in the VoltKart app', 'courier makes 3 attempts', and 'drop-off options', which do not address the specific consequences of failing the quality check."
+        },
+        "contextual_precision": {
+          "score": 1.0,
+          "passed": true,
+          "reason": "The score is 1.00 because all retrieved nodes are highly relevant to the input, providing direct answers about rejection, fees, and timelines. It's a perfect match!"
+        },
+        "contextual_recall": {
+          "score": 1.0,
+          "passed": true,
+          "reason": "The score is 1.00 because every sentence in the expected output is fully supported by the retrieval context. Specifically, the details regarding the 2-business-day QC timeline and the rejection process (including customer-caused damage, IMEI mismatch, and the ₹149 fee) are directly attributed to nodes 1, 2, and 3 in retrieval context. Great job capturing all the key details accurately!"
+        }
+      }
+    },
+    {
+      "id": "rag_04",
+      "language": "en",
+      "question": "How long do UPI, credit card, and card EMI refunds take after initiation?",
+      "expected_output": "After the refund is initiated, UPI refunds take 1 to 3 business days, credit or debit card and net banking refunds take 5 to 7 business days, and card EMI principal refunds take 7 to 10 business days.",
+      "actual_output": "UPI refunds take 1 to 3 business days, credit card refunds take 5 to 7 business days, and card EMI refunds take 7 to 10 business days after initiation. [S1] [S2] [S3]",
+      "supported": true,
+      "citations": [
+        {
+          "source_id": "S1",
+          "source": "refund_policy.pdf",
+          "page": null,
+          "faq_id": "ref_upi_time",
+          "category": "refunds",
+          "language": "en",
+          "source_type": "faq"
+        },
+        {
+          "source_id": "S2",
+          "source": "refund_policy.pdf",
+          "page": 1,
+          "faq_id": null,
+          "category": null,
+          "language": null,
+          "source_type": "policy"
+        },
+        {
+          "source_id": "S3",
+          "source": "refund_policy.pdf",
+          "page": null,
+          "faq_id": "ref_card_time",
+          "category": "refunds",
+          "language": "en",
+          "source_type": "faq"
+        }
+      ],
+      "retrieved_chunks_count": 3,
+      "metrics": {
+        "faithfulness": {
+          "score": 1.0,
+          "passed": true,
+          "reason": "The score is 1.00 because the actual output is perfectly faithful to the retrieval context, with no contradictions detected. Great job maintaining accuracy!"
+        },
+        "answer_relevancy": {
+          "score": 1.0,
+          "passed": true,
+          "reason": "The score is 1.00 because the response contains no irrelevant statements and directly addresses the query with full relevance."
+        },
+        "contextual_relevancy": {
+          "score": 0.5833,
+          "passed": false,
+          "reason": "The score is 0.58 because while the context provides accurate timelines for 'UPI', 'credit card', and 'card EMI' refunds, it is diluted by irrelevant information regarding 'Net banking', 'VoltKart Wallet', 'Cash on Delivery (COD)', 'Cardless EMI (partner NBFC)', and 'Gift card'."
+        },
+        "contextual_precision": {
+          "score": 1.0,
+          "passed": true,
+          "reason": "The score is 1.00 because all retrieved nodes are highly relevant and directly address the query. The first node confirms UPI refund timelines, the second provides specific details for credit/debit cards and Card EMI, and the third reinforces the credit card timeframe. With no irrelevant nodes present, the ranking is perfect."
+        },
+        "contextual_recall": {
+          "score": 1.0,
+          "passed": true,
+          "reason": "The score is 1.00 because the expected output is perfectly aligned with the retrieval context, as the refund timelines for UPI, credit/debit cards, net banking, and card EMI are explicitly detailed in nodes 1, 2, and 3 of the retrieval context. Great job capturing all the specific details accurately!"
+        }
+      }
+    },
+    {
+      "id": "rag_05",
+      "language": "hinglish",
+      "question": "Kya VoltKart Wallet mein refund lene par koi bonus milta hai aur kya wo expire hota hai?",
+      "expected_output": "Yes, if you choose to receive your refund in the VoltKart Wallet, you get a 1% bonus on the refund amount up to ₹100. The bonus cash expires after 90 days, while the main wallet balance does not expire.",
+      "actual_output": "Haan, VoltKart Wallet mein refund lene par aapko refund amount par 1% bonus milta hai, jo ₹100 tak ho sakta hai. Yeh bonus 90 din ke baad expire ho jata hai, lekin aapka main wallet balance kabhi expire nahi hota. [S1] [S2] [S3]",
+      "supported": true,
+      "citations": [
+        {
+          "source_id": "S1",
+          "source": "refund_policy.pdf",
+          "page": null,
+          "faq_id": "ref_wallet_bonus",
+          "category": "refunds",
+          "language": "hinglish",
+          "source_type": "faq"
+        },
+        {
+          "source_id": "S2",
+          "source": "faq.json",
+          "page": null,
+          "faq_id": "acct_wallet",
+          "category": "payments",
+          "language": "hinglish",
+          "source_type": "faq"
+        },
+        {
+          "source_id": "S3",
+          "source": "refund_policy.pdf",
+          "page": 1,
+          "faq_id": null,
+          "category": null,
+          "language": null,
+          "source_type": "policy"
+        }
+      ],
+      "retrieved_chunks_count": 3,
+      "metrics": {
+        "faithfulness": {
+          "score": 1.0,
+          "passed": true,
+          "reason": "The score is 1.00 because the actual output is perfectly faithful to the retrieval context, with no contradictions detected. Great job maintaining accuracy!"
+        },
+        "answer_relevancy": {
+          "score": 1.0,
+          "passed": true,
+          "reason": "The score is 1.00 because the response is fully relevant and contains no irrelevant statements."
+        },
+        "contextual_relevancy": {
+          "score": 0.5,
+          "passed": false,
+          "reason": "The score is 0.50 because while the context directly answers the input by stating 'You get a 1% bonus on the refund amount, up to ₹100' and that 'The bonus expires after 90 days', it is diluted by irrelevant information regarding 'bank interest', 'foreclosure charges', and 'COD handling fees'."
+        },
+        "contextual_precision": {
+          "score": 1.0,
+          "passed": true,
+          "reason": "The score is 1.00 because all retrieved nodes are highly relevant, with the first node directly stating 'You get a 1% bonus on the refund amount, up to ₹100' and clarifying that 'The bonus expires after 90 days, while the main wallet balance does not expire.' This perfect alignment with the query ensures a top-tier ranking."
+        },
+        "contextual_recall": {
+          "score": 1.0,
+          "passed": true,
+          "reason": "The score is 1.00 because every sentence in the expected output is fully supported by the nodes in retrieval context. Specifically, the details about the 1% bonus and its cap are attributed to nodes 1 and 3, while the expiration terms are confirmed by nodes 1, 2, and 3. Great job capturing all the key details accurately!"
+        }
+      }
+    },
+    {
+      "id": "rag_06",
+      "language": "en",
+      "question": "What are the eligibility rules and charges for Express delivery and Cash on Delivery?",
+      "expected_output": "Express delivery is available in 8 metro cities for items with the Express badge for a ₹149 fee (same-day delivery if ordered before 12 noon, next-day if ordered later; TVs above 43 inches are not eligible). Cash on Delivery (COD) is available for orders up to ₹20,000 in COD-enabled pin codes with a non-refundable ₹40 handling fee.",
+      "actual_output": "Express delivery is available in 8 metro cities for items with the Express badge for a fee of ₹149. Orders placed before 12 noon are delivered the same day, while later orders are delivered the next day. Televisions above 43 inches are not eligible. Cash on Delivery (COD) is available for orders up to ₹20,000 in COD-enabled pin codes, with a handling fee of ₹40. You can pay via cash or UPI QR code. If you refuse two COD orders, COD may be disabled on your account. [S1] [S2] [S3]",
+      "supported": true,
+      "citations": [
+        {
+          "source_id": "S1",
+          "source": "shipping_delivery_policy.pdf",
+          "page": 1,
+          "faq_id": null,
+          "category": null,
+          "language": null,
+          "source_type": "policy"
+        },
+        {
+          "source_id": "S2",
+          "source": "shipping_delivery_policy.pdf",
+          "page": null,
+          "faq_id": "ship_express",
+          "category": "shipping",
+          "language": "en",
+          "source_type": "faq"
+        },
+        {
+          "source_id": "S3",
+          "source": "shipping_delivery_policy.pdf",
+          "page": null,
+          "faq_id": "ship_cod_limit",
+          "category": "shipping",
+          "language": "en",
+          "source_type": "faq"
+        }
+      ],
+      "retrieved_chunks_count": 3,
+      "metrics": {
+        "faithfulness": {
+          "score": 1.0,
+          "passed": true,
+          "reason": "The score is 1.00 because the actual output is perfectly faithful to the retrieval context, with no contradictions detected. Great job maintaining accuracy!"
+        },
+        "answer_relevancy": {
+          "score": 0.6667,
+          "passed": false,
+          "reason": "The score is 0.67 because the response includes irrelevant details regarding delivery timelines and payment methods, which do not address the specific request for eligibility rules and charges."
+        },
+        "contextual_relevancy": {
+          "score": 0.875,
+          "passed": true,
+          "reason": "The score is 0.88 because the context directly answers the query by providing specific eligibility rules and charges, such as 'Express delivery is available in 8 metro cities... for a ₹149 fee' and 'COD is available for orders up to ₹20,000... with a ₹40 handling fee'. However, the score is not 1.0 due to irrelevant information regarding 'High-value deliveries' and 'Delivery attempts and returned parcels' which were not requested."
+        },
+        "contextual_precision": {
+          "score": 1.0,
+          "passed": true,
+          "reason": "The score is 1.00 because all three retrieval nodes are highly relevant and directly address the input. The first node explicitly states 'Express delivery is available in 8 metro cities for items with the Express badge. The fee is ₹149', the second confirms 'Yes, in 8 metro cities for items with the Express badge, for a ₹149 fee', and the third provides the exact eligibility rules and charges for Cash on Delivery, stating 'COD is available for orders up to ₹20,000 in COD-enabled pin codes, with a ₹40 handling fee'. Perfect precision!"
+        },
+        "contextual_recall": {
+          "score": 1.0,
+          "passed": true,
+          "reason": "The score is 1.00 because every sentence in the expected output is fully supported by the nodes in retrieval context. Specifically, sentences 1-3 are corroborated by node 1 and node 2, while sentence 4 is confirmed by node 1 and node 3. With no unsupported claims, the retrieval context perfectly captures the expected information. Great job!"
+        }
+      }
+    },
+    {
+      "id": "rag_07",
+      "language": "hinglish",
+      "question": "Mera order estimated delivery date se 3 business days se zyada late ho gaya hai. Kya mujhe koi compensation milega?",
+      "expected_output": "If your order arrives more than 3 business days after the estimated delivery date, ₹100 is automatically credited to your VoltKart Wallet. You can also cancel the delayed order for a full refund.",
+      "actual_output": "Haan, agar aapka order estimated delivery date se 3 business days se zyada late hua hai, toh aapke VoltKart Wallet mein ₹100 automatically credit kiye jayenge. Aap is delayed order ko cancel karke full refund bhi le sakte hain. [S1]",
+      "supported": true,
+      "citations": [
+        {
+          "source_id": "S1",
+          "source": "shipping_delivery_policy.pdf",
+          "page": null,
+          "faq_id": "ship_delay",
+          "category": "shipping",
+          "language": "hinglish",
+          "source_type": "faq"
+        }
+      ],
+      "retrieved_chunks_count": 3,
+      "metrics": {
+        "faithfulness": {
+          "score": 1.0,
+          "passed": true,
+          "reason": "The score is 1.00 because the actual output is perfectly faithful to the retrieval context, with no contradictions detected. Great job maintaining accuracy!"
+        },
+        "answer_relevancy": {
+          "score": 1.0,
+          "passed": true,
+          "reason": "The score is 1.00 because the response is fully relevant to the input, with no irrelevant statements detected."
+        },
+        "contextual_relevancy": {
+          "score": 0.3333,
+          "passed": false,
+          "reason": "The score is 0.33 because while the context contains specific details about 'photos', 'unboxing video', and 'replacement' for 'damaged product' or 'wrong item' scenarios which are irrelevant to the input's query about 'late delivery', it does include the relevant statement: 'If the order arrives more than 3 business days after the estimated delivery date, ₹100 is credited to your VoltKart Wallet automatically.'"
+        },
+        "contextual_precision": {
+          "score": 1.0,
+          "passed": true,
+          "reason": "The score is 1.00 because the first node in the retrieval contexts is highly relevant, directly addressing the compensation for orders arriving 'more than 3 business days after the estimated delivery date,' which perfectly matches the user's query. The subsequent nodes are irrelevant as they discuss 'damaged' products and 'wrong item' replacements, but since the most relevant information is ranked first, the precision is optimal."
+        },
+        "contextual_recall": {
+          "score": 1.0,
+          "passed": true,
+          "reason": "The score is 1.00 because both sentences in the expected output are fully supported by node 1 in retrieval context, which explicitly details the ₹100 wallet credit and the option for a full refund upon cancellation."
+        }
+      }
+    },
+    {
+      "id": "rag_08",
+      "language": "en",
+      "question": "How soon must I cancel a build-to-order laptop, and what happens if I cancel one item from a multi-item order?",
+      "expected_output": "Build-to-order laptops, desktops, and customised products can be cancelled only within 2 hours of placing the order. You can cancel one item from a multi-item order before it ships, but if the remaining order falls below ₹999, the ₹59 shipping fee is deducted from the refund.",
+      "actual_output": "You can cancel a build-to-order laptop only within 2 hours of placing the order. For a multi-item order, you can cancel one item before it ships. If the remaining order value falls below ₹999, a ₹59 shipping fee will be deducted from your refund. [S1] [S2] [S3]",
+      "supported": true,
+      "citations": [
+        {
+          "source_id": "S1",
+          "source": "cancellation_policy.pdf",
+          "page": 1,
+          "faq_id": null,
+          "category": null,
+          "language": null,
+          "source_type": "policy"
+        },
+        {
+          "source_id": "S2",
+          "source": "cancellation_policy.md",
+          "page": null,
+          "faq_id": "can_bto",
+          "category": "cancellation",
+          "language": "en",
+          "source_type": "faq"
+        },
+        {
+          "source_id": "S3",
+          "source": "cancellation_policy.md",
+          "page": null,
+          "faq_id": "can_partial",
+          "category": "cancellation",
+          "language": "en",
+          "source_type": "faq"
+        }
+      ],
+      "retrieved_chunks_count": 3,
+      "metrics": {
+        "faithfulness": {
+          "score": 1.0,
+          "passed": true,
+          "reason": "The score is 1.00 because the actual output is perfectly faithful to the retrieval context, with no contradictions detected. Great job maintaining accuracy!"
+        },
+        "answer_relevancy": {
+          "score": 1.0,
+          "passed": true,
+          "reason": "The score is 1.00 because the response contains no irrelevant statements and fully addresses the input."
+        },
+        "contextual_relevancy": {
+          "score": 0.3333,
+          "passed": false,
+          "reason": "The score is 0.33 because while the context provides specific answers to the input's questions—stating that 'Build-to-order laptops... can be cancelled only within 2 hours' and detailing that 'You can cancel one item of a multi-item order before it ships'—it is heavily diluted by irrelevant information. The context includes discussions on 'accepting delivery and raising a return', 'Pre-orders', and 'automatic cancellation due to payment pending', none of which address the user's specific query about active cancellation timelines and partial order rules."
+        },
+        "contextual_precision": {
+          "score": 1.0,
+          "passed": true,
+          "reason": "The score is 1.00 because all retrieved nodes are highly relevant and perfectly address the input. The first node explicitly states that 'Build-to-order laptops, desktops and customised products can be cancelled only within 2 hours of placing the order' and details that for multi-item orders, 'If the cancellation brings the remaining order below ₹999, the ₹59 shipping fee is deducted from the refund.' The second and third nodes further reinforce these points, confirming the 2-hour window and the shipping fee deduction rule. With no irrelevant nodes present, the ranking is optimal."
+        },
+        "contextual_recall": {
+          "score": 1.0,
+          "passed": true,
+          "reason": "The score is 1.00 because every sentence in the expected output is fully supported by the nodes in retrieval context. Specifically, the first sentence is attributed to node 1 and node 2, while the second sentence is supported by node 1 and node 3. With no unsupported content, the recall is perfect!"
+        }
+      }
+    },
+    {
+      "id": "rag_09",
+      "language": "en",
+      "question": "What is the warranty period for televisions, laptops, and SSDs or HDDs?",
+      "expected_output": "Televisions have 12 months of comprehensive warranty and 24 months on the panel. Laptops have 12 months of warranty on the device and 6 months on the battery and adapter. SSDs and HDDs carry 36 months of warranty.",
+      "actual_output": "Televisions have a 12-month comprehensive warranty and a 24-month warranty on the panel. Laptops have a 12-month warranty (with 6 months on the battery and adapter). SSDs and HDDs have a 36-month warranty. [S1] [S2]",
+      "supported": true,
+      "citations": [
+        {
+          "source_id": "S1",
+          "source": "warranty_policy.pdf",
+          "page": 1,
+          "faq_id": null,
+          "category": null,
+          "language": null,
+          "source_type": "policy"
+        },
+        {
+          "source_id": "S2",
+          "source": "warranty_policy.pdf",
+          "page": null,
+          "faq_id": "war_tv",
+          "category": "warranty",
+          "language": "en",
+          "source_type": "faq"
+        }
+      ],
+      "retrieved_chunks_count": 3,
+      "metrics": {
+        "faithfulness": {
+          "score": 1.0,
+          "passed": true,
+          "reason": "The score is 1.00 because the actual output is perfectly faithful to the retrieval context, with no contradictions detected. Great job maintaining accuracy!"
+        },
+        "answer_relevancy": {
+          "score": 1.0,
+          "passed": true,
+          "reason": "The score is 1.00 because the response is fully relevant and contains no irrelevant statements."
+        },
+        "contextual_relevancy": {
+          "score": 0.2593,
+          "passed": false,
+          "reason": "The score is 0.26 because while the context provides specific warranty durations for the requested items (e.g., 'Laptops have a warranty of 12 months', 'Televisions have a warranty of 12 months comprehensive', 'SSD and HDD have a warranty of 36 months'), it is heavily diluted by irrelevant information regarding 'Smartphones and tablets', 'Headphones, speakers, earbuds', and 'Gaming consoles', as well as details about return windows and exclusions that do not address the core query about warranty periods."
+        },
+        "contextual_precision": {
+          "score": 1.0,
+          "passed": true,
+          "reason": "The score is 1.00 because the top two retrieval nodes are highly relevant, explicitly listing the warranty periods for 'Laptops', 'Televisions', and 'SSD and HDD' as requested. The only irrelevant node, which discusses 'Return window by category', is correctly ranked last, ensuring all relevant information appears before any unrelated content."
+        },
+        "contextual_recall": {
+          "score": 1.0,
+          "passed": true,
+          "reason": "The score is 1.00 because every sentence in the expected output is fully supported by the nodes in retrieval context. Specifically, the television warranty details are backed by node 1 and node 2, while the laptop and storage device warranties are directly attributed to node 1. With no unsupported claims, the retrieval context perfectly covers the expected information!"
+        }
+      }
+    },
+    {
+      "id": "rag_10",
+      "language": "hinglish",
+      "question": "VoltKart Protect plan kya cover karta hai aur ise kab khareed sakte hain?",
+      "expected_output": "VoltKart Protect is an optional plan that covers accidental damage such as cracked screens and liquid damage for 12 months from purchase for eligible products priced ₹3,000 and above. You can buy it at checkout or within 7 days of delivery. It allows one claim per plan with no deductible and is fully refundable within 7 days if no claim has been made.",
+      "actual_output": "VoltKart Protect ek optional plan hai jo purchase ke 12 mahine tak accidental damage (jaise cracked screen ya liquid damage) cover karta hai. Yeh plan ₹3,000 ya usse zyada ke smartphones, tablets, laptops, smartwatches aur headphones ke liye available hai. Aap ise checkout ke time ya delivery ke 7 din ke andar khareed sakte hain. [S1] [S3]",
+      "supported": true,
+      "citations": [
+        {
+          "source_id": "S1",
+          "source": "warranty_policy.pdf",
+          "page": null,
+          "faq_id": "war_protect",
+          "category": "warranty",
+          "language": "hinglish",
+          "source_type": "faq"
+        },
+        {
+          "source_id": "S3",
+          "source": "warranty_policy.pdf",
+          "page": 2,
+          "faq_id": null,
+          "category": null,
+          "language": null,
+          "source_type": "policy"
+        }
+      ],
+      "retrieved_chunks_count": 3,
+      "metrics": {
+        "faithfulness": {
+          "score": 1.0,
+          "passed": true,
+          "reason": "The score is 1.00 because the actual output is perfectly faithful to the retrieval context, with no contradictions detected. Great job maintaining accuracy!"
+        },
+        "answer_relevancy": {
+          "score": 1.0,
+          "passed": true,
+          "reason": "The score is 1.00 because the response is fully relevant and contains no irrelevant statements."
+        },
+        "contextual_relevancy": {
+          "score": 0.7273,
+          "passed": true,
+          "reason": "The score is 0.73 because the context directly answers the input by stating that 'VoltKart Protect is an optional plan that covers accidental damage such as cracked screens and liquid damage for 12 months' and 'can be bought at checkout or within 7 days of delivery'. However, the score is reduced due to irrelevant details regarding 'one claim per plan with no deductible' and 'fully refundable within 7 days if no claim is made', which do not address the specific questions about coverage scope and purchase timing."
+        },
+        "contextual_precision": {
+          "score": 0.8333,
+          "passed": true,
+          "reason": "The score is 0.83 because the first and third nodes in the retrieval contexts are highly relevant, directly stating the plan covers 'accidental damage such as cracked screens and liquid damage for 12 months' and can be purchased 'at checkout or within 7 days of delivery'. However, the second node is irrelevant as it discusses 'service center delays and escalation processes', which does not address the coverage or purchase timing, preventing a perfect score."
+        },
+        "contextual_recall": {
+          "score": 1.0,
+          "passed": true,
+          "reason": "The score is 1.00 because every sentence in the expected output is fully supported by node 1 in retrieval context, which contains all the relevant details about coverage, purchase windows, and refund policies. Great job capturing all the key points perfectly!"
+        }
+      }
+    },
+    {
+      "id": "rag_11",
+      "language": "hinglish",
+      "question": "Kya TV installation free hai aur 50 inch TV ke wall mount bracket aur fitting ka kitna charge lagega?",
+      "expected_output": "Free demo and installation by the brand technician is provided for TVs of 32 inches and above. However, a wall-mount bracket is usually not included in the box. For a 44 to 55 inch TV, the bracket costs ₹1,299 (₹799 for 32 to 43 inch, ₹1,799 for 56 inch and above), and the technician charges ₹399 to fit the bracket on the wall.",
+      "actual_output": "Haan, 32 inch aur usse bade TVs ki installation free hai. 50 inch TV ke liye wall mount bracket ka charge ₹1,299 hai aur fitting ka charge ₹399 hai. [S1] [S2] [S3]",
+      "supported": true,
+      "citations": [
+        {
+          "source_id": "S1",
+          "source": "installation_setup_policy.pdf",
+          "page": null,
+          "faq_id": "inst_bracket",
+          "category": "installation",
+          "language": "hinglish",
+          "source_type": "faq"
+        },
+        {
+          "source_id": "S2",
+          "source": "installation_setup_policy.pdf",
+          "page": null,
+          "faq_id": "inst_tv_free",
+          "category": "installation",
+          "language": "hinglish",
+          "source_type": "faq"
+        },
+        {
+          "source_id": "S3",
+          "source": "installation_setup_policy.pdf",
+          "page": 1,
+          "faq_id": null,
+          "category": null,
+          "language": null,
+          "source_type": "policy"
+        }
+      ],
+      "retrieved_chunks_count": 3,
+      "metrics": {
+        "faithfulness": {
+          "score": 1.0,
+          "passed": true,
+          "reason": "The score is 1.00 because the actual output is perfectly faithful to the retrieval context, with no contradictions detected. Great job maintaining accuracy!"
+        },
+        "answer_relevancy": {
+          "score": 1.0,
+          "passed": true,
+          "reason": "The score is 1.00 because the response is fully relevant and contains no irrelevant statements."
+        },
+        "contextual_relevancy": {
+          "score": 0.5833,
+          "passed": false,
+          "reason": "The score is 0.58 because while the context provides specific pricing for the 50-inch bracket ('₹1,299 for 44 to 55 inch') and fitting ('₹399'), it is diluted by irrelevant information regarding 'damage reporting policies', 'defect verification', and 'remote setup for phones, tablets and laptops'."
+        },
+        "contextual_precision": {
+          "score": 1.0,
+          "passed": true,
+          "reason": "The score is 1.00 because all retrieved nodes are highly relevant, providing the exact pricing and installation details needed to answer the query. It's a perfect match!"
+        },
+        "contextual_recall": {
+          "score": 1.0,
+          "passed": true,
+          "reason": "The score is 1.00 because every sentence in the expected output is fully supported by the retrieval context. Specifically, the details regarding free installation, bracket availability, pricing tiers, and technician fees are all accurately attributed to the 1st and 2nd nodes in retrieval context. Great job capturing all the relevant details!"
+        }
+      }
+    },
+    {
+      "id": "rag_12",
+      "language": "en",
+      "question": "Does VoltKart provide any setup help for phones, tablets, or laptops?",
+      "expected_output": "Phones, tablets, and laptops do not need physical installation, but VoltKart support offers a free 30-minute remote setup call (for account setup and data transfer help) within 7 days of delivery.",
+      "actual_output": "Yes, VoltKart offers a free 30-minute remote setup call for phones, tablets, and laptops within 7 days of delivery. This includes help with account setup and data transfer. [S1]",
+      "supported": true,
+      "citations": [
+        {
+          "source_id": "S1",
+          "source": "installation_setup_policy.pdf",
+          "page": 1,
+          "faq_id": null,
+          "category": null,
+          "language": null,
+          "source_type": "policy"
+        }
+      ],
+      "retrieved_chunks_count": 3,
+      "metrics": {
+        "faithfulness": {
+          "score": 1.0,
+          "passed": true,
+          "reason": "The score is 1.00 because the actual output is perfectly faithful to the retrieval context, with no contradictions detected. Great job maintaining accuracy!"
+        },
+        "answer_relevancy": {
+          "score": 1.0,
+          "passed": true,
+          "reason": "The score is 1.00 because the response directly addresses the input without any irrelevant statements, providing a clear and focused answer."
+        },
+        "contextual_relevancy": {
+          "score": 0.1176,
+          "passed": false,
+          "reason": "The score is 0.12 because the retrieval context is overwhelmingly irrelevant, focusing on 'Brackets', 'TV size', 'wall fitting', and 'protect plan' policies, whereas the input specifically asks about setup help for 'phones, tablets, or laptops'. Although two statements are relevant—'VoltKart support offers a free 30-minute remote setup call for phones, tablets, and laptops' and 'Phones, tablets and laptops do not need installation'—they are vastly outnumbered by unrelated content regarding televisions and warranties."
+        },
+        "contextual_precision": {
+          "score": 1.0,
+          "passed": true,
+          "reason": "The score is 1.00 because the top two retrieval nodes are highly relevant, directly addressing the query by stating that 'VoltKart support offers a free 30-minute remote setup call' and that these devices 'do not need installation.' The third node, which discusses 'VoltKart Protect' warranty plans, is correctly ranked lower as it is irrelevant to the specific question about setup assistance."
+        },
+        "contextual_recall": {
+          "score": 1.0,
+          "passed": true,
+          "reason": "The score is 1.00 because the expected output is fully supported by the retrieval context, with node 2 in retrieval context confirming the installation details and node 1 in retrieval context providing the specific support call information."
+        }
+      }
+    }
+  ]
+}

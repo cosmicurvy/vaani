@@ -1,0 +1,19 @@
+# Virtual environments & caches
+vaani/
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+
+# Secrets & Git
+.env
+.git/
+.gitignore
+.github/
+
+# Runtime session databases & evaluation outputs
+data/vaani_support.db*
+data/vaani_memory.db*
+evaluation/results/

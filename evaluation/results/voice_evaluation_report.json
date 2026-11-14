@@ -1,0 +1,103 @@
+{
+  "total_samples": 6,
+  "wer_mean": 0.4711,
+  "wer_median": 0.4346,
+  "stt_failure_rate": 0.0,
+  "tts_failure_rate": 0.1667,
+  "latency_ms": {
+    "stt_mean": 1036.37,
+    "stt_p95": 1237.74,
+    "support_mean": 6853.45,
+    "tts_mean": 9091.13,
+    "tts_p95": 10631.57,
+    "e2e_mean": 18309.26,
+    "e2e_p50": 19710.12,
+    "e2e_p95": 22612.32
+  },
+  "samples": [
+    {
+      "id": "voice_01",
+      "language": "en",
+      "ground_truth": "Where is my order VK10001 and when will it arrive?",
+      "transcript": "Where is my order VK1001 and when will it arrive?",
+      "wer": 0.1,
+      "stt_success": true,
+      "tts_response_success": true,
+      "stt_latency_ms": 1217.31,
+      "support_latency_ms": 7.1,
+      "tts_latency_ms": 8750.04,
+      "e2e_latency_ms": 9974.46,
+      "error": null
+    },
+    {
+      "id": "voice_02",
+      "language": "en",
+      "ground_truth": "What is the return policy for damaged electronic items?",
+      "transcript": "What is the return policy for damaged electronic items?",
+      "wer": 0.0,
+      "stt_success": true,
+      "tts_response_success": true,
+      "stt_latency_ms": 608.14,
+      "support_latency_ms": 10234.62,
+      "tts_latency_ms": 9233.21,
+      "e2e_latency_ms": 20075.97,
+      "error": null
+    },
+    {
+      "id": "voice_03",
+      "language": "en",
+      "ground_truth": "How many days does it take to process a refund to my original payment method?",
+      "transcript": "How many days does it take to process a refund to my original payment method?",
+      "wer": 0.0,
+      "stt_success": true,
+      "tts_response_success": true,
+      "stt_latency_ms": 761.91,
+      "support_latency_ms": 11548.3,
+      "tts_latency_ms": 10936.19,
+      "e2e_latency_ms": 23246.4,
+      "error": null
+    },
+    {
+      "id": "voice_04",
+      "language": "hinglish",
+      "ground_truth": "Mera order abhi tak deliver nahi hua hai, main status kaise check karun?",
+      "transcript": "میرا order بھی تک deliver نہیں ہوئے, میں status کیسے چکھ کروں",
+      "wer": 0.7692,
+      "stt_success": true,
+      "tts_response_success": true,
+      "stt_latency_ms": 1214.59,
+      "support_latency_ms": 10201.64,
+      "tts_latency_ms": 7123.13,
+      "e2e_latency_ms": 18539.36,
+      "error": null
+    },
+    {
+      "id": "voice_05",
+      "language": "hinglish",
+      "ground_truth": "Kya main earbuds return kar sakti hoon agar seal open nahi hua hai?",
+      "transcript": "کیا میں یہ births return کر سکتیوں اگر SEAL OPEN نہیں ہوا ہے?",
+      "wer": 0.8462,
+      "stt_success": true,
+      "tts_response_success": true,
+      "stt_latency_ms": 1171.72,
+      "support_latency_ms": 9125.31,
+      "tts_latency_ms": 9413.09,
+      "e2e_latency_ms": 19710.12,
+      "error": null
+    },
+    {
+      "id": "voice_06",
+      "language": "hinglish",
+      "ground_truth": "Mera product toota hua mila hai, mujhe replacement chahiye.",
+      "transcript": "میرا پر آڈک ٹھو ٹھو امیلا ہے مجھے ریپلیسمن چاہئے",
+      "wer": 1.1111,
+      "stt_success": true,
+      "tts_response_success": false,
+      "stt_latency_ms": 1244.55,
+      "support_latency_ms": 3.7,
+      "tts_latency_ms": null,
+      "e2e_latency_ms": null,
+      "error": "Output TTS failed: Gemini TTS request failed (ClientError): 429 RESOURCE_EXHAUSTED. {'error': {'code': 429, 'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://aistudio.google.com/docs/rate-limits. To monitor your current usage, head to: https://ai.dev/rate-limit. \\n* Quota exceeded for metric: generativelanguage.googleapis.com/generate_content_free_tier_requests, limit: 10, model: gemini-3.1-flash-tts, description: Generate content requests per day limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.\\nPlease retry in 20h50m33.454273349s.', 'status': 'RESOURCE_EXHAUSTED', 'details': [{'@type': 'type.googleapis.com/google.rpc.Help', 'links': [{'description': 'Learn more about Gemini API quotas', 'url': 'https://aistudio.google.com/docs/rate-limits'}]}, {'@type': 'type.googleapis.com/google.rpc.QuotaFailure', 'violations': [{'description': 'Generate content requests per day limit exceeded on Free Tier. See https://aistudio.google.com/docs/rate-limits.', 'quotaMetric': 'generativelanguage.googleapis.com/generate_content_free_tier_requests', 'quotaId': 'GenerateRequestsPerDayPerProjectPerModel-FreeTier', 'quotaDimensions': {'model': 'gemini-3.1-flash-tts', 'location': 'global'}, 'quotaValue': '10'}]}, {'@type': 'type.googleapis.com/google.rpc.RetryInfo', 'retryDelay': '75033s'}]}}"
+    }
+  ]
+}

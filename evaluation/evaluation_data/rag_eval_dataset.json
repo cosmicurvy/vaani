@@ -1,0 +1,86 @@
+[
+  {
+    "id": "rag_01",
+    "category": "returns",
+    "language": "en",
+    "question": "Can I return earbuds if I changed my mind, and is there any pickup fee?",
+    "expected_output": "Earbuds have a 10-day return window. A change-of-mind return is accepted only if the hygiene seal is intact (once broken, only defective units can be returned). For change-of-mind returns, a ₹99 reverse pickup fee is deducted from your refund, whereas dropping the parcel at a VoltKart partner pickup point is free."
+  },
+  {
+    "id": "rag_02",
+    "category": "returns",
+    "language": "hinglish",
+    "question": "Mera product damaged aaya hai, mujhe kitne time mein report karna chahiye aur kya proof dena hoga?",
+    "expected_output": "Report the damaged product within 48 hours of delivery in My Orders with clear photos and an uncut unboxing video showing the sealed package being opened. Pickup is free and the item is replaced."
+  },
+  {
+    "id": "rag_03",
+    "category": "returns",
+    "language": "en",
+    "question": "What happens if my returned item fails the warehouse quality check?",
+    "expected_output": "Quality check is completed within 2 business days after the item reaches the warehouse. If the returned item fails the quality check (for example, due to customer-caused damage or a mismatched IMEI), the return is rejected, the item is sent back to you, and a reverse shipping fee of ₹149 may be charged."
+  },
+  {
+    "id": "rag_04",
+    "category": "refunds",
+    "language": "en",
+    "question": "How long do UPI, credit card, and card EMI refunds take after initiation?",
+    "expected_output": "After the refund is initiated, UPI refunds take 1 to 3 business days, credit or debit card and net banking refunds take 5 to 7 business days, and card EMI principal refunds take 7 to 10 business days."
+  },
+  {
+    "id": "rag_05",
+    "category": "refunds",
+    "language": "hinglish",
+    "question": "Kya VoltKart Wallet mein refund lene par koi bonus milta hai aur kya wo expire hota hai?",
+    "expected_output": "Yes, if you choose to receive your refund in the VoltKart Wallet, you get a 1% bonus on the refund amount up to ₹100. The bonus cash expires after 90 days, while the main wallet balance does not expire."
+  },
+  {
+    "id": "rag_06",
+    "category": "shipping",
+    "language": "en",
+    "question": "What are the eligibility rules and charges for Express delivery and Cash on Delivery?",
+    "expected_output": "Express delivery is available in 8 metro cities for items with the Express badge for a ₹149 fee (same-day delivery if ordered before 12 noon, next-day if ordered later; TVs above 43 inches are not eligible). Cash on Delivery (COD) is available for orders up to ₹20,000 in COD-enabled pin codes with a non-refundable ₹40 handling fee."
+  },
+  {
+    "id": "rag_07",
+    "category": "shipping",
+    "language": "hinglish",
+    "question": "Mera order estimated delivery date se 3 business days se zyada late ho gaya hai. Kya mujhe koi compensation milega?",
+    "expected_output": "If your order arrives more than 3 business days after the estimated delivery date, ₹100 is automatically credited to your VoltKart Wallet. You can also cancel the delayed order for a full refund."
+  },
+  {
+    "id": "rag_08",
+    "category": "cancellation",
+    "language": "en",
+    "question": "How soon must I cancel a build-to-order laptop, and what happens if I cancel one item from a multi-item order?",
+    "expected_output": "Build-to-order laptops, desktops, and customised products can be cancelled only within 2 hours of placing the order. You can cancel one item from a multi-item order before it ships, but if the remaining order falls below ₹999, the ₹59 shipping fee is deducted from the refund."
+  },
+  {
+    "id": "rag_09",
+    "category": "warranty",
+    "language": "en",
+    "question": "What is the warranty period for televisions, laptops, and SSDs or HDDs?",
+    "expected_output": "Televisions have 12 months of comprehensive warranty and 24 months on the panel. Laptops have 12 months of warranty on the device and 6 months on the battery and adapter. SSDs and HDDs carry 36 months of warranty."
+  },
+  {
+    "id": "rag_10",
+    "category": "warranty",
+    "language": "hinglish",
+    "question": "VoltKart Protect plan kya cover karta hai aur ise kab khareed sakte hain?",
+    "expected_output": "VoltKart Protect is an optional plan that covers accidental damage such as cracked screens and liquid damage for 12 months from purchase for eligible products priced ₹3,000 and above. You can buy it at checkout or within 7 days of delivery. It allows one claim per plan with no deductible and is fully refundable within 7 days if no claim has been made."
+  },
+  {
+    "id": "rag_11",
+    "category": "installation",
+    "language": "hinglish",
+    "question": "Kya TV installation free hai aur 50 inch TV ke wall mount bracket aur fitting ka kitna charge lagega?",
+    "expected_output": "Free demo and installation by the brand technician is provided for TVs of 32 inches and above. However, a wall-mount bracket is usually not included in the box. For a 44 to 55 inch TV, the bracket costs ₹1,299 (₹799 for 32 to 43 inch, ₹1,799 for 56 inch and above), and the technician charges ₹399 to fit the bracket on the wall."
+  },
+  {
+    "id": "rag_12",
+    "category": "installation",
+    "language": "en",
+    "question": "Does VoltKart provide any setup help for phones, tablets, or laptops?",
+    "expected_output": "Phones, tablets, and laptops do not need physical installation, but VoltKart support offers a free 30-minute remote setup call (for account setup and data transfer help) within 7 days of delivery."
+  }
+]
