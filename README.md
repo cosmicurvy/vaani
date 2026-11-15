@@ -1,4 +1,4 @@
-# Vaani --- Voice-Enabled Customer Support Chatbot
+# Vaani: Voice-Enabled Customer Support Chatbot
 
 Vaani is a bilingual (English and Hinglish) customer-support chatbot
 built for **VoltKart**, a sample Indian electronics e-commerce store.
@@ -208,4 +208,4 @@ API quota. Configure valid API keys before running them.
 
 ## Project Status
 
-Vaani demonstrates an end-to-end approach to building an intelligent, bilingual customer-support assistant, combining conversational AI, hybrid RAG, secure order verification, and voice interaction. The current benchmark shows strong faithfulness and retrieval recall, while contextual relevance, multi-turn task completion, voice transcription quality, latency, and API quota handling remain areas for improvement.
+Vaani demonstrates an end-to-end approach to building an intelligent, bilingual customer-support chatbot, combining conversational AI, hybrid RAG, secure order verification, and voice interaction. The current benchmark shows strong faithfulness and retrieval recall, while contextual relevance, multi-turn task completion, voice transcription quality, latency, and API quota handling remain areas for improvement.
